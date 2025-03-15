@@ -44,5 +44,22 @@ dots.forEach(dot => {
     });
 });
 
+
+
 // Initial display
 showSlide(currentIndex);
+
+
+// Get the hamburger icon and navigation menu
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('ul.nav-links');
+
+// Toggle the 'active' class when the hamburger icon is clicked
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+  hamburger.classList.toggle('active');
+});
+
+
+
+
