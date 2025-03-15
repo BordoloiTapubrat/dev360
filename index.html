@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEV360</title>
+    <style>
+        body {
+            font-family: 'Helvetica', 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+            box-sizing: border-box;
+        }
+
+        /* Left Sidebar (Fixed) */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 250px;
+            height: 100%;
+            background-color: #ff7e5f;
+            padding-top: 20px;
+            color: white;
+            text-align: center;
+            font-size: 20px;
+            box-shadow: 4px 0 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+            font-size: 18px;
+            transition: background-color 0.3s;
+        }
+
+        .sidebar a:hover {
+            background-color: #feb47b;
+        }
+
+        /* Main Content Area */
+        .main-content {
+            margin-left: 260px;
+            padding: 20px;
+            background-color: #fff;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin: 0;
+        }
+
+        h2 {
+            font-size: 28px;
+            color: #ff7e5f;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            padding: 12px 25px;
+            background-color: #ff7e5f;
+            color: white;
+            border: none;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #feb47b;
+        }
+
+        /* Footer Styling */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #ff7e5f;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* LinkedIn Section Styling */
+        .linkedin-section {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .linkedin-section a {
+            text-decoration: none;
+            color: #0A66C2;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .linkedin-logo {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        /* Team Section Styling */
+        .team-section {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .team-section h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #ff7e5f;
+        }
+
+        .team {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .team-member {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            text-align: center;
+            padding: 20px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .team-member:hover {
+            transform: translateY(-5px);
+        }
+
+        .team-member img {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        .team-member h3 {
+            font-size: 20px;
+            color: #333;
+        }
+
+        .team-member p {
+            font-size: 14px;
+            color: #777;
+        }
+
+        /* Services Section Styling */
+        .services-section ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 20px 0;
+            font-size: 18px;
+        }
+
+        .services-section li {
+            background-color: #ff7e5f;
+            color: white;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Left Sidebar Section -->
+    <div class="sidebar">
+        <h2>My Small Webpage</h2>
+        <a href="#" id="homeLink">Home</a>
+        <a href="#" id="servicesLink">Services</a>
+        <a href="#" id="contactLink">Contact</a>
+    </div>
+
+    <!-- Main Content Section -->
+    <div class="main-content">
+        <!-- Home Section -->
+        <section class="home-section" id="homeSection" style="display: none;">
+            <h2>Welcome to DEV360!</h2>
+            <p>Welcome to our website! We are dedicated to providing high-quality content, services, and resources that will help you achieve your goals. We hope to make your experience here valuable and enjoyable. Let's get started!</p>
+            <button class="btn">Learn More</button>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services-section" id="servicesSection" style="display: none;">
+            <h2>Our Services</h2>
+            <p>We offer a range of services designed to help businesses achieve success. Here are some of the services we provide:</p>
+            <ul>
+                <li><strong>Low Code/No Code Development:</strong> Rapid application development with minimal hand-coding using platforms that empower non-developers.</li>
+                <li><strong>CRM (Customer Relationship Management):</strong> Streamlining customer interactions and enhancing business relationships through advanced CRM systems.</li>
+                <li><strong>Test Automation:</strong> Implementing automated testing solutions for more efficient, scalable, and reliable software delivery.</li>
+                <li><strong>Cloud Services (IaaS, PaaS, SaaS):</strong> Cloud infrastructure, platforms, and software as a service that scale with your business.</li>
+                <li><strong>Android Development:</strong> Creating high-performance mobile applications tailored for Android devices.</li>
+                <li><strong>iOS Development:</strong> Building native iOS applications designed to deliver seamless and engaging user experiences.</li>
+            </ul>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section" id="contactSection" style="display: none;">
+            <h2>Contact Us</h2>
+            <p>Have questions or want to work with us? Get in touch using the form below or reach us through the contact details provided.</p>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+
+            <!-- LinkedIn Section -->
+            <div class="linkedin-section">
+                <h3>Connect with Us on LinkedIn</h3>
+                <p>We'd love to connect with you! Follow us for updates and industry insights.</p>
+                <a href="https://www.linkedin.com/in/your-linkedin-profile/" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/LinkedIn_Logo_2023.svg" class="linkedin-logo" alt="LinkedIn Logo">
+                    Visit Our LinkedIn Profile
+                </a>
+            </div>
+
+            <!-- Team Section -->
+            <div class="team-section">
+                <h2>Meet Our Team</h2>
+                <div class="team">
+                    <div class="team-member">
+                        <img src="https://via.placeholder.com/120" alt="Team Member 1">
+                        <h3>John Doe</h3>
+                        <p>Project Manager</p>
+                        <p>John ensures that the project runs smoothly, coordinating between teams and clients to ensure success.</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="https://via.placeholder.com/120" alt="Team Member 2">
+                        <h3>Jane Smith</h3>
+                        <p>Lead Developer</p>
+                        <p>Jane leads the development team, overseeing the technical aspects of our web development projects.</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="https://via.placeholder.com/120" alt="Team Member 3">
+                        <h3>Mark Johnson</h3>
+                        <p>Designer</p>
+                        <p>Mark is our creative expert, responsible for designing user-friendly interfaces and attractive websites.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 My Small Webpage. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Function to display the Home Section and hide the others
+        function showHome() {
+            document.getElementById("homeSection").style.display = "block";
+            document.getElementById("servicesSection").style.display = "none";
+            document.getElementById("contactSection").style.display = "none";
+        }
+
+        // Function to display the Services Section and hide the others
+        function showServices() {
+            document.getElementById("servicesSection").style.display = "block";
+            document.getElementById("homeSection").style.display = "none";
+            document.getElementById("contactSection").style.display = "none";
+        }
+
+        // Function to display the Contact Section and hide the others
+        function showContact() {
+            document.getElementById("contactSection").style.display = "block";
+            document.getElementById("homeSection").style.display = "none";
+            document.getElementById("servicesSection").style.display = "none";
+        }
+
+        // Event listeners for the menu items
+        document.getElementById("homeLink").addEventListener("click", function(e) {
+            e.preventDefault();
+            showHome();
+        });
+
+        document.getElementById("servicesLink").addEventListener("click", function(e) {
+            e.preventDefault();
+            showServices();
+        });
+
+        document.getElementById("contactLink").addEventListener("click", function(e) {
+            e.preventDefault();
+            showContact();
+        });
+
+        // Initially display the Home section
+        showHome();
+    </script>
+</body>
+</html>
