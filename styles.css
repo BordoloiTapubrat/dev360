@@ -112,30 +112,6 @@ ul.nav-links .dropdown-menu li a:hover {
   font-size: 0.8rem;
 }
 
-/* Hamburger Menu */
-.hamburger {
-  display: none;
-  cursor: pointer;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30px;
-  height: 25px;
-  background: transparent;
-  border: none;
-}
-
-.hamburger div {
-  width: 100%;
-  height: 5px;
-  background-color: white;
-  border-radius: 5px;
-  transition: all 0.3s ease-in-out;
-}
-
-.nav-links-container {
-  display: flex;
-}
-
 /* Carousel Styles */
 .carousel {
   position: relative;
@@ -159,6 +135,114 @@ ul.nav-links .dropdown-menu li a:hover {
   width: 100%; /* Make image stretch to fill the container */
   height: 100%; /* Ensure the image fills the container */
   object-fit: cover; /* Preserve aspect ratio and cover the entire area */
+}
+
+button.prev, button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+  font-size: 24px;
+}
+
+button.prev {
+  left: 10px;
+}
+
+button.next {
+  right: 10px;
+}
+
+button.prev:hover, button.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Client Engagements Section */
+.client-engagements {
+  background-color: #ffffff;
+  padding: 40px 20px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.client-engagements h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.client-logos {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.logos-container {
+  display: flex;
+  animation: scroll 20s linear infinite; /* Animation for infinite scrolling */
+}
+
+.logos-container img {
+  margin: 0 20px;
+  width: 150px;
+  height: 50px;
+  object-fit: contain;
+}
+
+/* Keyframes for scrolling effect */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.book-poc {
+  background-color: #f1f1f1;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.book-poc .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.book-poc h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.book-poc p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.book-poc .book-now-btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #0073b1;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.book-poc .book-now-btn:hover {
+  background-color: #005c8a;
 }
 
 /* Footer Styles */
@@ -208,35 +292,267 @@ footer {
   color: #3498db;
 }
 
-/* Responsive styles for header */
+.footer-section form input {
+  padding: 10px;
+  font-size: 1rem;
+  width: 80%;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+.footer-section form button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.footer-section form button:hover {
+  background-color: #2980b9;
+}
+
+/* Responsive styles for footer */
 @media (max-width: 768px) {
-  ul.nav-links {
-    display: none; /* Hide menu by default on small screens */
-    flex-direction: column; /* Stack items vertically */
+  .footer-section {
     width: 100%;
-    background-color: #0073b1;
-    padding: 20px;
+    margin-bottom: 20px;
   }
 
-  ul.nav-links.active {
-    display: flex; /* Show menu when hamburger is clicked */
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
   }
 
-  .hamburger {
-    display: flex; /* Show hamburger icon on mobile */
+  .footer-section form input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+
+
+/* Footer Styles */
+footer {
+background-color: #2c3e50;
+color: white;
+padding: 40px 20px;
+margin-top: 60px; /* Space to separate footer from the rest of the content */
+}
+
+.footer-container {
+display: flex;
+justify-content: space-between;
+max-width: 1200px;
+margin: 0 auto;
+flex-wrap: wrap; /* Ensure items wrap on smaller screens */
+}
+
+.footer-section {
+width: 30%;
+padding: 10px;
+}
+
+.footer-section h3 {
+font-size: 1.4rem;
+font-weight: bold;
+margin-bottom: 20px;
+}
+
+.footer-section ul {
+list-style-type: none;
+margin-bottom: 20px;
+}
+
+.footer-section ul li {
+margin-bottom: 10px;
+}
+
+.footer-section a {
+text-decoration: none;
+color: white;
+font-size: 1rem;
+transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+color: #3498db;
+}
+
+/* Newsletter Section */
+.footer-section form input {
+padding: 10px;
+font-size: 1rem;
+width: 80%;
+margin-right: 10px;
+border-radius: 5px;
+border: none;
+}
+
+.footer-section form button {
+padding: 10px 20px;
+font-size: 1rem;
+background-color: #3498db;
+color: white;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}
+
+.footer-section form button:hover {
+background-color: #2980b9;
+}
+
+#subscribe-icon {
+margin-left: 10px;
+display: inline-block;
+}
+
+/* Responsive styles for footer */
+@media (max-width: 768px) {
+.footer-section {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.footer-container {
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-section form input {
+  width: 100%;
+  margin-bottom: 10px;
+}
+}
+
+/* Contact Form Styles */
+.contact-form {
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+  text-align: center;
+  margin-top: 80px; /* Avoid the fixed header */
+}
+
+.contact-form .container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact-form h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.contact-form .form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.contact-form label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #555;
+}
+
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.contact-form textarea {
+  height: 150px;
+}
+
+.contact-form button.submit-btn {
+  padding: 12px 30px;
+  background-color: #0073b1;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  margin-top: 20px;
+}
+
+.contact-form button.submit-btn:hover {
+  background-color: #005c8a;
+}
+
+footer {
+  background-color: #2c3e50;
+  color: white;
+  padding: 40px 20px;
+  margin-top: 60px; /* Space to separate footer from the rest of the content */
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap; /* Ensure items wrap on smaller screens */
+}
+
+.footer-section {
+  width: 30%;
+  padding: 10px;
+}
+
+.footer-section h3 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer-section ul {
+  list-style-type: none;
+  margin-bottom: 20px;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+  color: #3498db;
+}
+
+/* Responsive styles for contact form */
+@media (max-width: 768px) {
+  .contact-form {
+      padding: 40px 20px;
   }
 
-  .hamburger.active div:nth-child(1) {
-    transform: rotate(45deg);
-    top: 10px;
+  .footer-section {
+      width: 100%;
+      margin-bottom: 20px;
   }
 
-  .hamburger.active div:nth-child(2) {
-    opacity: 0;
+  .footer-container {
+      flex-direction: column;
+      align-items: center;
   }
 
-  .hamburger.active div:nth-child(3) {
-    transform: rotate(-45deg);
-    top: -10px;
+  .contact-form input, .contact-form textarea {
+      width: 100%;
   }
 }
