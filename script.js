@@ -23,6 +23,23 @@ function showSlide(index) {
     });
 }
 
+
+// email function
+
+function sendMail(){
+    let parms = {
+       fname : document.getElementById("fname").value,
+        lname : document.getElementById("lname").value,
+        email : document.getElementById("email").value,
+        phone : document.getElementById("phone").value,
+        message : document.getElementById("message").value,
+    }
+emailjs.send("service_pbthgwj","template_4dhoh61",parms).then(alert("email Sent!!))
+
+
+}
+        
+
 // Go to the previous slide
 prevButton.addEventListener('click', () => {
     currentIndex = (currentIndex === 0) ? totalSlides - 1 : currentIndex - 1;
