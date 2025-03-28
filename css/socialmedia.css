@@ -1,0 +1,33 @@
+.icon-bar {
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: 1;
+}
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 13px;
+  transition: all 0.3s ease;
+  color: rgb(250, 248, 248);
+  font-size: 13px;
+}
+
+.icon-bar a:hover {
+  background-color: green;
+}
+
+.meta {
+  background: #3c61b3;
+  color: white;
+}
+.twitter {
+    background: #79b33c;
+    color: white;
+  }
+.instagram {
+    background: #5708d7;
+    color: white;
+  }
