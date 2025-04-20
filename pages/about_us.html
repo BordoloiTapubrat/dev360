@@ -14,10 +14,19 @@
     <link href="../css/custom.css" rel="stylesheet" />
     <link href="../css/flip.css" rel="stylesheet" />
 
+    <link href="../css/socialmedia.css" rel="stylesheet" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
     <script src="../js/aboutusread.js"></script>
   </head>
   <body onload="readAboutUstxt()">
-    <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+    <div id="socialMedia"></div>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
           <img
@@ -26,9 +35,7 @@
             width="120"
             height="40"
             id="logo"
-          />
-        </a>
-        <!-- <a class="navbar-brand" href="../index.html">Home</a>
+        /></a>
         <button
           class="navbar-toggler"
           type="button"
@@ -39,10 +46,10 @@
           aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
-        </button> -->
+        </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item" id="menuItems">
+            <li class="nav-item">
               <a
                 class="nav-link active"
                 aria-current="page"
@@ -54,7 +61,7 @@
               <a
                 class="nav-link active"
                 aria-current="page"
-                href="./about_us.html"
+                href="../pages/about_us.html"
                 >About</a
               >
             </li>
@@ -68,6 +75,7 @@
               >
                 Industry
               </a>
+
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="#">Educational</a></li>
                 <li><hr class="dropdown-divider" /></li>
@@ -126,7 +134,7 @@
               <a
                 class="nav-link active"
                 aria-current="page"
-                href="./contact.html"
+                href="../pages/contact.html"
                 target="_blank"
                 >Contact</a
               >
@@ -460,6 +468,7 @@
         </div>
       </footer>
     </div>
+    <script src="../js/socialMedia.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
