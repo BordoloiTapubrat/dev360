@@ -1,34 +1,50 @@
 .icon-bar {
   position: fixed;
   top: 50%;
-  left: 95%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
+  left: 97%;
   transform: translateY(-50%);
-  z-index: 1;
+  z-index: 2;
 }
+
 .icon-bar a {
   display: block;
   text-align: center;
-  padding: 13px;
+  padding: 16px;
   transition: all 0.3s ease;
-  color: rgb(250, 248, 248);
-  font-size: 13px;
+  color: white;
+  font-size: 20px;
 }
 
 .icon-bar a:hover {
-  background-color: green;
+  background-color: #000;
 }
 
-.meta {
-  background: #3c61b3;
+.facebook {
+  background: #3b5998;
   color: white;
 }
+
 .twitter {
-  background: #79b33c;
+  background: #55acee;
   color: white;
 }
-.instagram {
-  background: #5708d7;
+
+.google {
+  background: #dd4b39;
   color: white;
+}
+
+.linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.content {
+  margin-left: 75px;
+  font-size: 30px;
 }

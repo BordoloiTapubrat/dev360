@@ -13,10 +13,21 @@
     />
     <link href="../css/custom.css" rel="stylesheet" />
     <link href="../css/flip.css" rel="stylesheet" />
+
+    <script src="../js/aboutusread.js"></script>
   </head>
-  <body>
+  <body onload="readAboutUstxt()">
     <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
       <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img
+            src="../images/Logo/Logo.jpg"
+            alt="Reliable Innovations"
+            width="120"
+            height="40"
+            id="logo"
+          />
+        </a>
         <!-- <a class="navbar-brand" href="../index.html">Home</a>
         <button
           class="navbar-toggler"
@@ -31,7 +42,7 @@
         </button> -->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
+            <li class="nav-item" id="menuItems">
               <a
                 class="nav-link active"
                 aria-current="page"
@@ -58,11 +69,17 @@
                 Industry
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Industry 1</a></li>
+                <li><a class="dropdown-item" href="#">Educational</a></li>
                 <li><hr class="dropdown-divider" /></li>
-                <li><a class="dropdown-item" href="#">Industry 2</a></li>
+                <li><a class="dropdown-item" href="#">Health Care</a></li>
                 <li><hr class="dropdown-divider" /></li>
-                <li><a class="dropdown-item" href="#">Industry 3</a></li>
+                <li><a class="dropdown-item" href="#">Manufacturing </a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">RealEstate / Housing </a>
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#">Utility </a></li>
               </ul>
             </li>
             <li class="nav-item dropdown">
@@ -76,11 +93,33 @@
                 Services
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Services 1</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Automation - FE/BE</a>
+                </li>
                 <li><hr class="dropdown-divider" /></li>
-                <li><a class="dropdown-item" href="#">Services 2</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">End to End Automation</a>
+                </li>
                 <li><hr class="dropdown-divider" /></li>
-                <li><a class="dropdown-item" href="#">Services 3</a></li>
+                <li><a class="dropdown-item" href="#">Testing - FE/BE</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">CRM Implementation</a>
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#">LCNC Development</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >Web Application Development</a
+                  >
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >Android / IOS Development
+                  </a>
+                </li>
               </ul>
             </li>
             <li class="nav-item">
@@ -141,8 +180,8 @@
         <div class="col-sm-6 shadow-lg p-1 mb-1 bg-body-tertiary rounded">
           <div class="card-body p-3 mb-1">
             <h5 class="card-title">Card title</h5>
-            <p class="card-text">
-              Some quick example text to build on the card title and make up the
+            <p class="card-text" id="readFromFile">
+              <!-- Some quick example text to build on the card title and make up the
               bulk of the card's content. Some quick example text to build on
               the card title and make up the bulk of the card's content. Some
               quick example text to build on the card title and make up the bulk
@@ -155,7 +194,7 @@
               the card's content. Some quick example text to build on the card
               title and make up the bulk of the card's content. Some quick
               example text to build on the card title and make up the bulk of
-              the card's content.
+              the card's content. -->
             </p>
           </div>
           <!-- <div class="shadow-lg p-1 mb-1 bg-body-tertiary rounded"> -->

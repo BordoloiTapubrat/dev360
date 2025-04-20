@@ -1,6 +1,11 @@
-var navBar =
-  '<div class = "icon-bar">\
-  <a href="http" class="meta">Meta</a>\
-<a href="http" class="twitter">X</a>\
-  <a href="http" class="instagram">Instagram</a></div>';
+
+
+var navBar ='<div class="icon-bar">\
+  <a href="#" class="facebook"><i class="fa fa-facebook"></i></a> \
+  <a href="#" class="twitter"><i class="fa fa-twitter"></i></a> \
+  <a href="#" class="google"><i class="fa fa-google"></i></a> \
+  <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>\
+  <a href="#" class="youtube"><i class="fa fa-youtube"></i></a>\
+</div>'
+
 document.getElementById("socialMedia").innerHTML = navBar;
